@@ -1,0 +1,59 @@
+.floating-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: var(--light-black-color);
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  width: 65px;
+  height: 65px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.floating-item__banner {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f76570;
+  display: block;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding: 4px 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.floating-item__dolar {
+  position: absolute;
+  top: 13px;
+  left: 12px;
+  font-size: 0.9rem;
+}
+
+.floating-item__circle-img {
+  position: absolute;
+  top: 100%;
+  left: -3px;
+  transform: translate(-50%, -100%);
+  background-color: var(--text-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-item__img {
+  width: 15px;
+  height: 15px;
+}

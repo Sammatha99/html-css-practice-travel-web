@@ -1,0 +1,586 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* HACK font-size: 62.5%
+    các đơn vị dùng đơn vị rem
+    vd: muốn có p: 16px ---> font-size: 1.6rem
+                p: 12px ---> font-size: 1.2rem
+  */
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: var(--text-light-color);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-light-color);
+}
+
+::placeholder {
+  color: var(--text-light-color);
+}
+
+:root {
+  --primary-color: #14b9d5;
+
+  --text-color: #555;
+  --text-light-color: #9a9a9a;
+  --text-s-light-color: #e2dfe5;
+  --white-color: #fff;
+
+  --dark-white-color: #f9f9f9;
+  --light-black-color: #5d5d5d;
+
+  --border-color: #f1f1f1;
+  --button-border-radius: 30px;
+  --width-container: 1200px;
+  --padding: 15px;
+
+  --table-heading-color: #a3a3a3;
+  --table-content-today: #1bbc9b;
+
+  --header-search-height: 340px;
+  --search-post-height: 100px;
+  --slider-time-wrap-item: 120px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* animation keyframes  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* background color */
+.background-color--yellow-gradient {
+  background: linear-gradient(to right, #ffd205 0%, #ff9b05 100%);
+}
+
+.background-color--red-gradient {
+  background: linear-gradient(to right, #f76570 0%, #f78d65 100%);
+}
+
+.background-color--purple-gradient {
+  background: linear-gradient(to right, #ba71da 0%, #da717b 100%);
+}
+
+.background-color--green-gradient {
+  background: linear-gradient(to right, #1bbc9b 0%, #1bbc63 100%);
+}
+
+.background-color--orange-gradient {
+  background: linear-gradient(to right, #f3a46b 0%, #f3c96b 100%);
+}
+
+.background-color--blue-gradient {
+  background: linear-gradient(to right, #14b9d5 0%, #14d5b1 100%);
+}
+
+/* color */
+.white-color {
+  color: var(--white-color) !important;
+}
+
+/* center */
+.wrap--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* margin  */
+.margin-vertical-50 {
+  height: 50px;
+  background-color: transparent;
+}
+
+.margin-vertical-25 {
+  height: 25px;
+  background-color: transparent;
+}
+
+.margin-vertical-20 {
+  height: 20px;
+  background-color: transparent;
+}
+
+.margin-vertical-15 {
+  height: 15px;
+  background-color: transparent;
+}
+
+.margin-vertical-10 {
+  height: 10px;
+  background-color: transparent;
+}
+
+/* padding  */
+.padding-15 {
+  padding: var(--padding);
+}
+
+.padding-tb-x {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+/* button  */
+.btn {
+  display: inline-block;
+  border-radius: var(--button-border-radius);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  min-width: 100px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+.btn--disable {
+  cursor: default;
+  opacity: 0.5 !important;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn--big {
+  padding: 15px 35px;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn--green {
+  background-color: #1bbc9b;
+  color: var(--white-color);
+}
+
+.btn--white {
+  background-color: var(--white-color);
+  color: var(--color);
+}
+
+/* menu drop down */
+.submenu-list {
+  z-index: 2;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  list-style: none;
+  padding: 0;
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 5px #f1f1f1;
+}
+
+.submenu-item:hover > .submenu-link {
+  background-color: var(--dark-white-color);
+}
+
+.submenu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  color: var(--text-light-color);
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.submenu-icon {
+  height: 1.4rem;
+}
+
+.submenu--right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -28px;
+  width: 28px;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* heading and text */
+.text--letter-spacing-0 {
+  letter-spacing: 0px;
+}
+
+.text--letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.text--link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.text--normal {
+  line-height: 27px;
+  color: var(--text-light-color);
+}
+
+.text--strong {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.text--light-uppercase {
+  color: var(--text-light-color);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  line-height: 2.7rem;
+}
+
+.text--strike-through {
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.text--strike-through::after {
+  content: " ";
+  z-index: -9;
+  position: absolute;
+  bottom: 11px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--strike-through-color);
+}
+
+.text--margin {
+  margin: var(--margin-custom);
+}
+
+.text--font-size-10 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.text--font-size-9 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.text--font-size-8 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.text--font-size-7 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.text--font-size-6 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.text--font-size-5 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.text--font-size-4 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.text--font-size-3 {
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+}
+
+.text--font-size-2 {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+.text--font-size-1 {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+/* travel section card  */
+.travel-section {
+  width: 100%;
+  background: var(--background-img) center center / cover no-repeat;
+  padding-top: 100%;
+  position: relative;
+}
+
+.travel-section:hover .travel-section__link {
+  opacity: 1;
+}
+
+.travel-section-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(101, 100, 96, 0) 0%,
+    rgba(101, 100, 96, 0.1) 60%,
+    rgba(101, 100, 96, 0.65) 100%
+  );
+}
+
+.travel-section__img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.travle-section__img {
+  width: 35px;
+  height: 35px;
+}
+
+.travel-section__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  color: white;
+  text-align: left;
+}
+
+.travel-section__info-desc {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 14px;
+}
+
+.travel-section__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  transition: opacity 1s;
+}
+
+.travel-section__link-desc {
+  line-height: 2.7rem;
+}
+
+/* location card  */
+.sidebar__location-item {
+  padding: 15px;
+}
+
+.location-card-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.location-card__img-wrap {
+  margin-right: 30px;
+}
+
+.location-card__img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.location-card__info {
+  text-align: left;
+}
+
+.location-card__heading {
+  color: var(--text-color);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.location-card__desc {
+  color: var(--text-light-color);
+  letter-spacing: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.location-card__icon {
+  margin-right: 2px;
+  color: var(--text-s-light-color);
+  display: inline-block;
+}
+
+.location-card__price {
+  border-radius: var(--button-border-radius);
+  padding: 6px 20px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* travel package card  */
+.travel-package-card {
+  border: 1px solid var(--border-color);
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform ease 0.2s;
+}
+
+.travel-package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 2px 5px #f1f1f1;
+}
+
+.travel-package-card .btn {
+  background-color: var(--background-color-1);
+  color: var(--white-color);
+}
+
+.travel-package-card__img-wrap {
+  background: var(--background-img) center center / cover no-repeat;
+  padding-top: 62%;
+  position: relative;
+}
+
+.travel-package-card__icon-wrap {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(
+    to right,
+    var(--background-color-1) 0%,
+    var(--background-color-2) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.travel-package-card__icon {
+  height: 25px;
+}
+
+.travel-package-card__info {
+  padding: 30px;
+}
+
+.travel-package-card__seperate {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.travel-package-card__type-price-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.travel-package-card__type-price-wrap p {
+  color: var(--text-color);
+  line-height: 23px;
+}
+
+.travel-package-card__quantity {
+  border-radius: var(--button-border-radius);
+  color: var(--white-color);
+  background-color: var(--background-color-1);
+  padding: 0px 6px;
+}
+
+.travel-package-card__price-wrap {
+  display: flex;
+  align-items: center;
+}

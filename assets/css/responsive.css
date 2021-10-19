@@ -1,0 +1,174 @@
+/* small than 1200px  */
+@media (max-width: 1199px) {
+  :root {
+    --filter-search-margin-top: 0px;
+    --search-post-height: 35px;
+  }
+
+  .header__navbar-list {
+    display: none;
+  }
+
+  .sidebar {
+    width: 300px;
+    padding: 40px;
+    background-color: var(--text-color);
+    border-left: none;
+  }
+
+  .sidebar__close-img {
+    display: none;
+  }
+
+  .sidebar__close-img--max-1199 {
+    display: block;
+  }
+
+  .sidebar-wrap {
+    display: none;
+  }
+
+  .sidebar-wrap--max-1199 {
+    display: block;
+  }
+
+  /* content  */
+  .header-content-margin {
+    margin-top: 0;
+  }
+
+  .search__more-filter-wrap {
+    transform: translate(0, 50%);
+  }
+
+  .more-filter__wrap {
+    border-top: 1px solid var(--border-color);
+  }
+
+  .more-filter__wrap::before {
+    display: none;
+  }
+
+  /* search filter section  */
+  .search-filter-section {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .sort-display-wrap {
+    display: none;
+  }
+
+  /* slider images  */
+  .slider-time-wrap {
+    transform: translateY(0);
+  }
+
+  .slider-wrap {
+    margin-bottom: var(--slider-time-wrap-item);
+  }
+
+  .slider-time-inner {
+    width: 100%;
+  }
+
+  .travel-package-card__type-price-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .travel-package-card__margin-vertical {
+    height: 10px;
+  }
+
+  /* footer  */
+  .footer__copyright-1,
+  .footer__copyright-2 {
+    text-align: center;
+  }
+}
+
+/* small pc + big tablet  */
+@media (max-width: 1199px) and (min-width: 960px) {
+  :root {
+    --width-container: 960px;
+  }
+}
+
+/* smal tablet  */
+@media (max-width: 959px) and (min-width: 768px) {
+  :root {
+    --width-container: 748px;
+  }
+}
+
+/* big mobile  */
+@media (min-width: 480px) and (max-width: 767px) {
+  :root {
+    --width-container: 460px;
+  }
+
+  .slider__control {
+    justify-content: center;
+  }
+
+  .slider__btn {
+    display: none;
+  }
+
+  .footer__contact-input-wrap,
+  .footer__contact-btn-wrap {
+    width: 100%;
+  }
+
+  .footer__contact-input-wrap {
+    padding-right: 0;
+  }
+}
+
+/* small mobile  */
+@media (min-width: 320px) and (max-width: 479px) {
+  :root {
+    --width-container: 300px;
+  }
+
+  /* calendar  */
+  .calendar-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slider-time-item ~ .slider-time-item::before {
+    display: none;
+  }
+
+  .slider__control {
+    justify-content: center;
+  }
+
+  .slider__btn {
+    display: none;
+  }
+
+  /* slider images  */
+  .slider-wrap {
+    margin-bottom: calc(var(--slider-time-wrap-item) * 4);
+  }
+
+  .slider-time-item {
+    width: 100%;
+  }
+
+  .slider-time-item ~ .slider-time-item::before {
+    display: none;
+  }
+
+  .footer__contact-input-wrap,
+  .footer__contact-btn-wrap {
+    width: 100%;
+  }
+
+  .footer__contact-input-wrap {
+    padding-right: 0;
+  }
+}

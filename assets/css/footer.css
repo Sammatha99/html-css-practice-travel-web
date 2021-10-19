@@ -1,0 +1,90 @@
+.footer {
+  background: url(http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-7.jpg?id=1602)
+    center center / cover no-repeat;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer__contact {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer__contact-input-wrap {
+  width: 75%;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__contact-input {
+  width: 100%;
+  border-radius: var(--button-border-radius);
+  border: 1px solid var(--border-color);
+  outline: none;
+  background-color: var(--dark-white-color);
+  color: var(--text-light-color);
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer__contact-btn-wrap {
+  width: 25%;
+}
+
+.footer__contact-btn {
+  width: 100%;
+}
+
+.footer-wrap {
+  padding: 35px 30px;
+  background-color: var(--white-color);
+}
+
+.footer__responsive-padding {
+  padding: 0px 25px 0px 15px;
+}
+
+.footer__img {
+  width: 150px;
+}
+
+.footer__media-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__media-img-link:hover .footer__media-img {
+  filter: opacity(0.5);
+}
+
+.footer__media-img {
+  width: 22px;
+  margin-right: 20px;
+}
+
+.footer__list-item-link:hover {
+  color: var(--primary-color);
+}
+
+.footer__list-item-icon {
+  margin-right: 10px;
+  color: var(--text-s-light-color);
+  font-size: 1rem;
+}
+
+.footer__copyright-wrap {
+  background-color: vaR(--primary-color);
+}
+
+.footer__copyright-wrap p {
+  color: var(--white-color);
+}
+
+.footer__copyright-2 {
+  text-align: right;
+}
