@@ -165,6 +165,7 @@
   height: 25px;
   top: 10px;
   right: 10px;
+  color: var(--text-light-color);
 }
 
 .sidebar__close-img--max-1199 {
@@ -174,6 +175,7 @@
   top: 20px;
   right: 20px;
   display: none;
+  color: var(--white-color);
 }
 
 .sidebar-wrap {

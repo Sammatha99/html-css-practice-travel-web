@@ -1,6 +1,6 @@
 .footer {
-  background: url(http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-7.jpg?id=1602)
-    center center / cover no-repeat;
+  background: url(/assets/img/background-imgs/background-img-footer.jpg) center
+    center / cover no-repeat;
   padding-top: 80px;
   padding-bottom: 80px;
 }
